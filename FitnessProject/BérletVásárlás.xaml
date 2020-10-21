@@ -1,0 +1,35 @@
+﻿<Window x:Class="FitnessProject.BuyTicket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessProject"
+        mc:Ignorable="d"
+        Title="Bérlet Vásárlás"
+        Style="{StaticResource buyWindowStyle}"
+        WindowStartupLocation="CenterScreen"
+        Height="700" Width="650" FontSize="18" FontFamily="Century Gothic">
+    <Border Background="#333333" Opacity=".85">
+        <StackPanel Margin="16" HorizontalAlignment="Center">
+            <TextBlock Style="{StaticResource ContentControlStyleBig}">Válaszd ki a Bérlet Paramtereit</TextBlock>
+            <Separator/>
+            <TextBlock Text="Érvényességi idő kezdete:" Style="{StaticResource ContentControlStyleSmall}" />
+            <DatePicker Name="validFromBuy"  />
+            <TextBlock Text="Érvényességi idő vége:" Style="{StaticResource ContentControlStyleSmall}" />
+            <DatePicker Name="validUntilBuy"  />
+            <TextBlock Text="Belepesek száma"  Style="{StaticResource ContentControlStyleSmall}" />
+            <TextBox Name="nrOfEntriesBuy"  TextAlignment="Center"/>
+            <TextBlock Text="Belepesek száma/nap" Style="{StaticResource ContentControlStyleSmall}" />
+            <TextBox Name="nrOfEntriesDayBuy" TextAlignment="Center"/>
+            <TextBlock Text="Ezen belépési órától" Style="{StaticResource ContentControlStyleSmall}" />
+            <TextBox Name="hourFromBuy" TextAlignment="Center" />
+            <TextBlock Text="Eddig az óráig" Style="{StaticResource ContentControlStyleSmall}" />
+            <TextBox Name="hourUntilBuy" TextAlignment="Center" />
+            <RadioButton Name="weekendBuy" Margin="20,20" HorizontalAlignment="Center" Foreground="White">Hétvégén is</RadioButton>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="backToTicket" Margin="120,0"  Content="Vissza" Click="BackToTicket_Click" />
+                <Button Name="buttonBuy" Margin="120,0"  Content="Vásárlás" Click="ButtonBuy_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
